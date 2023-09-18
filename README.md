@@ -5,6 +5,7 @@ we will use CMOS general pdk 90nm (gpdk90) technology by Cadence.
 
 **Specifications**
 * $Gain = 1000 = 60dB$
+* $PM > 60 [deg]$ 
 * $I_{ref} = 10uA$
 * $V_{AA} = 2V$
 * $V_{out,CM}$ range $(0.6,1.2)V$
@@ -50,3 +51,12 @@ Telescopic amplifier with biasing network NET's -
 Full circuit - 
 ![image](https://github.com/dsapir4422/Telescopic_Amplifier/assets/87266625/15d7d6a4-e809-438f-bf8d-56204ec8100e)
 
+### Simulation Results
+**Stability Analysis** - We will use IPRB to simulate Loop Gain and Phase-Margin (PM) - 
+![image](https://github.com/dsapir4422/Telescopic_Amplifier/assets/87266625/0093e262-7b2f-4169-ad69-f90ed623d0d1)
+
+Running over corners - 
+
+<img src="https://github.com/dsapir4422/Telescopic_Amplifier/assets/87266625/1ab146c0-7801-4863-b8e6-017712ef471f" alt="Image Alt Text" width="500" height="500" />
+
+ 
