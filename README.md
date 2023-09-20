@@ -23,14 +23,16 @@ We will use the below circuit but with some changes -
 * Short Vout to Vin for introducing a buffer single ended stage
 
 **Gain** - 
-Looking from Vout to either PMOS or NMOS side, we have a cascode structure and therefore - $R_{out,p}$ = $g_{m,p}*r_{o,p}^2$ in parallel to $R_{out,n}$ = $g_{m,n}*r_{o,n}^2$
+Looking from Vout to either PMOS or NMOS side, we have a cascode structure and therefore - 
+
+$R_{out,p}$ = $g_{m,p}*r_{o,p}^2$ in parallel to $R_{out,n}$ = $g_{m,n}*r_{o,n}^2$
 
 Assuming M1,M2 and M3,M4 are identical - $A_v$ = $\frac{-(g_m*r_o)^2}{2}$
 
 otherwise - $A_v$ = $g_{m4}*(g_{m4}r_{o4}r_{o3})||(g_{m1}r_{o1}r_{o2})$
 
 **Biasing** - 
-Simulating gpdk90, we saw that $V_{th} = 0.5[V]$ roughly for PMOS, NMOS. Assuming $V_{ov} = 0.2[V]$ for a good current mirror - 
+Simulating gpdk90, we saw that $V_{th} = 0.5[V]$ (TT, 25) for PMOS, NMOS. Assuming $V_{ov} = 0.2[V]$ for a good current mirror - 
 * **Vb1** : We will use a current mirror to copy the 10uA current to M1 gate, therefore $V_{b1} = V_{gs,cm} \approx 0.8[V]$
 * **Vb2** : $V_{b2,min} = V_{ov1} + V_{gs2} = V_{ov1} + V_{ov2} + V{th,n} \approx 0.9 $
 * **Vb3** : $V_{b3,max} = V_{AA} - (V_{ov4} + V_{gs3}) = V_{AA} - (V_{ov4} + V_{ov3} + V_{th,p}) \approx 1.1[V]$
@@ -57,6 +59,6 @@ Full circuit -
 
 Running over corners - 
 
-<img src="https://github.com/dsapir4422/Telescopic_Amplifier/assets/87266625/1ab146c0-7801-4863-b8e6-017712ef471f" alt="Image Alt Text" width="500" height="500" />
+<img src="https://github.com/dsapir4422/Telescopic_Amplifier/assets/87266625/1ab146c0-7801-4863-b8e6-017712ef471f" alt="Image Alt Text" width="600" height="400" />
 
  
